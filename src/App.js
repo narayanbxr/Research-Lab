@@ -1,9 +1,13 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 export default function App() {
   /* ================= PARALLAX SYSTEM ================= */
   const { scrollY } = useScroll();
+
+  const sectionRaw = useTransform(scrollY, [0, 3000], [0, -140]);
+  const headingRaw = useTransform(scrollY, [0, 3000], [0, -240]);
+  const cardRaw = useTransform(scrollY, [0, 3000], [0, -80]);
 
   /* ================= GRAVITY PARTICLES ================= */
   const [particles, setParticles] = useState([]);

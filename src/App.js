@@ -9,10 +9,6 @@ export default function App() {
   const headingRaw = useTransform(scrollY, [0, 3000], [0, -240]);
   const cardRaw = useTransform(scrollY, [0, 3000], [0, -80]);
 
-  const sectionY = useSpring(sectionRaw, { stiffness: 45, damping: 18 });
-  const headingY = useSpring(headingRaw, { stiffness: 45, damping: 18 });
-  const cardY = useSpring(cardRaw, { stiffness: 45, damping: 18 });
-
   /* ================= GRAVITY PARTICLES ================= */
   const [particles, setParticles] = useState([]);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });

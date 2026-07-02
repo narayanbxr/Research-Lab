@@ -1,4 +1,4 @@
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 export default function App() {
